@@ -16,17 +16,86 @@ body {
   padding: 0;
 }
 
-// @theme inline {
-//   --color-background: var(--background);
-//   --color-foreground: var(--foreground);
-//   --font-sans: var(--font-geist-sans);
-//   --font-mono: var(--font-geist-mono);
-// }
+.react-multi-carousel-item:not(:first-child) .list-arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: var(--bg-color);
+  transform: translateY(-50%);
+  pointer-events: none;
+  user-select: none;
+  left: -45px;
+  background-image: url(/img/arrow.png);
+  background-color: var(--bg-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background: #0a0a0a;
-//     --foreground: #ededed;
-//   }
-// }
+@media (max-width: 1290px) {
+  .react-multi-carousel-item:not(:last-child) .list-arrow::after,
+  .react-multi-carousel-item:not(:first-child) .list-arrow::before {
+    width: 40px;
+    height: 40px;
+  }
 
+  .react-multi-carousel-item:not(:last-child) .list-arrow::after {
+    right: -45px !important;
+  }
+
+  .react-multi-carousel-item:not(:first-child) .list-arrow::before {
+    left: -30px !important;
+  }
+}
+
+.react-tabs__tab-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin: 0 !important;
+}
+
+.react-tabs__tab {
+  display: block !important;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  width: fit-content;
+  padding: 0!important;
+  padding-bottom: 10px !important;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF !important;
+}
+
+.react-tabs__tab--selected {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+  background: var(--gold) !important;
+}
+
+.react-tabs__tab--selected::after {
+  content: '';
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.react-tabs__tab-panel {
+  position: relative;
+  z-index: 20;
+  margin-top: -15px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+::placeholder {
+  color: #BEBEBE;
+  opacity: 1;
+}
+
+input {
+  caret-color: #EFEFEF;
+  color: #EFEFEF
+}
+
+input:focus, select { outline: none; }

@@ -20,15 +20,15 @@ export default function Header() {
                         <div className="text-white text-xs font-light">Days</div>
                     </div>
                     <div className={`${styles['promotion-datetime']} text-center relative`}>
-                        <div className="text-white text-4xl mb-1">27</div>
+                        <div className="text-white text-4xl mb-1">23</div>
                         <div className="text-white text-xs font-light">Hours</div>
                     </div>
                     <div className={`${styles['promotion-datetime']} text-center relative`}>
-                        <div className="text-white text-4xl mb-1">27</div>
+                        <div className="text-white text-4xl mb-1">45</div>
                         <div className="text-white text-xs font-light">Minutes</div>
                     </div>
                     <div className={`${styles['promotion-datetime']} text-center relative`}>
-                        <div className="text-white text-4xl mb-1">27</div>
+                        <div className="text-white text-4xl mb-1">07</div>
                         <div className="text-white text-xs font-light">Seconds</div>
                     </div>
                 </div>
