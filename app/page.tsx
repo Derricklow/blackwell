@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 
 const section_2_list = [
   "Spotlight",
@@ -16,6 +19,9 @@ const section_4_list = [
 ];
 
 export default function Home() {
+  // const [hoveredIndex, setHoveredIndex] = useState(null);
+  // const activeBorder = hoveredIndex !== null ? stepColors[hoveredIndex] : "#4A65E0";
+
   return (
     <main className="xl:pt-[100px] lg:pt-[100px] md:pt-[91px] pt-[83px]">
 
@@ -132,19 +138,21 @@ export default function Home() {
         <div className="max-w-[1520px] xl:w-[80%] lg:w-[90%] w-full mx-auto relative z-10 xl:pt-45 lg:pt-30 pt-30">
           <h3 className="xl:text-4xl lg:text-4xl text-4xl text-center font-bold text-[var(--darkblue)] mb-10">Trade Like a Pro in Minutes</h3>
 
-          <div className="flex flex-wrap">
-            <div className="xl:w-1/2 lg:w-1/2 w-full mb-10 px-5">
+          <div className="flex flex-wrap items-center">
+            <div className="xl:w-1/2 lg:w-full w-full">
                 {
                   section_4_list.map((item, index) => (
-                    <div key={index} className={`border ${(index + 1) % 2 ? "border-[var(--gold)]" : "border-[var(--orange)]"} flex items-center mb-7 rounded-lg xl:px-10 xl:py-5`}>
+                    <div 
+                      key={index} 
+                      className={`${(index + 1) % 2 ? "border-[var(--gold)]" : "border-[var(--orange)]"} border flex items-center mb-7 xl:px-10 xl:py-5 ${index == 1 ? 'bg-[var(--bg-color)] xl:rounded-tl-lg xl:rounded-bl-lg xl:border-r-[var(--bg-color)] xl:w-[100.2%] z-20' : 'rounded-lg mr-5'}`}>
                       <span className={`${(index + 1) % 2 ? "text-[var(--gold)]" : "text-[var(--orange)]"} italic xl:text-5xl mr-25`}>{index + 1}</span>
-                      <p className="text-white xl:text-2xl">{item.text}</p>
+                      <p className="text-white xl:text-2xl lg:text-xl text-xl">{item.text}</p>
                     </div>
                   ))
                 }
             </div>
-            <div className="xl:w-1/2 lg:w-1/2 w-full mb-10 px-5">
-              <div className="xl:w-[500px] rounded-lg overflow-hidden">
+            <div className="xl:w-1/2 lg:w-full w-full xl:block lg:hidden hidden mb-10 -z-20">
+              <div className="border border-[var(--orange)] xl:w-[500px] rounded-xl flex justify-center items-center overflow-hidden">
                 <img className="w-full object-cover" src="/img/guide-2.png" alt="guide-2" />
               </div>
             </div>
