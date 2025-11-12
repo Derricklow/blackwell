@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --darkblue: #01f2f2;
+  --lightblue: #040dbf;
+  --gold: #f2df79;
+  --orange: #F37406;
+  --bg-header: #112A4D;
+  --bg-color: #3A53BA;
+  --main-title: 'ATRotisSemiSans-ExtraBold';
+  --subtitle: 'ATRotisSemiSans-Light';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// @theme inline {
+//   --color-background: var(--background);
+//   --color-foreground: var(--foreground);
+//   --font-sans: var(--font-geist-sans);
+//   --font-mono: var(--font-geist-mono);
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --background: #0a0a0a;
+//     --foreground: #ededed;
+//   }
+// }
+
